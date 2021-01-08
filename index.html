@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заполнение заказа</title>
+
+    <style type="text/css">
+
+        * {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            }
+
+        #sec1, #sec2, #sec3, #sec4, #sec5, #sec6, #sec7, #sec8 { 
+            border-style: solid 1px;
+            font-size: 9pt; 
+            color: #292929;
+            }
+
+        #fld1, #fld2, #fld3, #fld4, #fld5, #fld6, #fld7, #fld8 { width: 600px; }
+
+              
+
+    </style>
+</head>
+
+  
+
+<body>
+
+    <header>    
+        <h1> <img src="./img/_cartBuy9.svg" width="35"/>  БЛАНК ЗАКАЗА</h1>
+    </header>    
+
+        <form action="handler.php" method="post">
+
+            <section id="sec1">
+
+                <fieldset id="fld1">
+
+                    <legend>Общая информация</legend>
+           
+                    <label for="number">№ Заказа:</label>
+                     <input id="number" size="16" type="number" name="date" min="1" max="19999" step="1" style="margin: 22px;">
+                
+                    <label for="datepay">Дата Заказа:</label>
+                    <input id="datepay" type="date" name="date" value="2021-01-01" style="margin: 1px;">
+
+                    <br>
+
+                    <label for="notepay" style="vertical-align:top;">Примечание:</label>
+                    <textarea name="notepay" id="note" cols="20" rows="3" style="margin: 5px; width: 349px; height: 40px;"></textarea>
+
+                </fieldset>
+     
+            </section>
+
+    
+    
+            <section id="sec2">
+
+                <fieldset id="fld2">
+
+                    <legend>Материнская плата (Motherboard)</legend>
+
+                    <br>
+            
+                    <label for="mbr">Наименование:</label>
+                    <select name="mbr">
+                        <optgroup label="Asus">
+                            <option value="a1">PRIME B450M-A II</option>
+                            <option value="a2">PRIME B550-PLUS</option>
+                            <option value="a3">Prime X299-A II</option>
+                        </optgroup>
+                        <optgroup label="Gigabyte">
+                            <option value="g1">B450 AORUS Elite V2</option>
+                            <option value="g2">B550 AORUS PRO AX</option>
+                            <option value="g3">B550 AORUS PRO V2</option>
+                        </optgroup>
+                        <optgroup label="MSI">
+                            <option value="i1">MEG Z490 GODLIKE</option>
+                            <option value="i2">PRESTIGE X570 CREATION</option>
+                            <option value="i3">TRX40 PRO 10G</option>
+                        </optgroup>
+                    </select>
+
+                    &nbsp; &nbsp;
+
+                    <label for="amt1">Количество:</label>
+                    <input id="amt1" size="8" type="text" name="amount1" style="margin: 1px;">
+
+                    <br><br>
+
+                </fieldset>
+
+                    <br>
+
+            </section>
+
+
+            <section id="sec3">
+
+                <fieldset id="fld3">
+
+                    <legend>Процессоры (CPU)</legend>
+
+                    <br>
+            
+                    <input id="dot1" type="checkbox" name="dot1" value="ICi3-10">
+                    <label for="dot1">Intel Core i3</label>
+
+                    &nbsp; &nbsp;
+                
+                    <label for="on1">К:</label>
+                    <input id="on1" type="radio" name="on1" value="TP-K">
+                
+                    <label for="on1">M:</label>
+                    <input id="on1" type="radio" name="on1" value="TP-M">
+
+                    <label for="on1">T:</label>
+                    <input id="on1" type="radio" name="on1" value="TP-T">
+
+                    &nbsp; &nbsp;
+
+                    <label for="amt1">Количество:</label>
+                    <input id="amt1" size="8" type="text" name="amount1" style="margin: 1px;">
+
+                    <br>
+
+                    <input id="dot2" type="checkbox" name="dot2" value="ICi5-10">
+                    <label for="dot2">Intel Core i5</label>
+
+                    &nbsp; &nbsp;
+
+                    <label for="on2">К:</label>
+                    <input id="on2" type="radio" name="on2" value="TP-K">
+                
+                    <label for="on2">M:</label>
+                    <input id="on2" type="radio" name="on2" value="TP-M">
+
+                    <label for="on23">T:</label>
+                    <input id="on2" type="radio" name="on2" value="TP-T">
+
+                    &nbsp; &nbsp;
+
+                    <label for="amt2">Количество:</label>
+                    <input id="amt2" size="8" type="text" name="amount2" style="margin: 1px;">
+
+                     <br>
+
+                    <input id="dot3" type="checkbox" name="dot3" value="ICi7-10">
+                    <label for="dot3">Intel Core i7</label>
+
+                    &nbsp; &nbsp;
+
+                    <label for="on3">К:</label>
+                    <input id="on3" type="radio" name="on3" value="TP-K">
+                
+                    <label for="on3">M:</label>
+                    <input id="on3" type="radio" name="on3" value="TP-M">
+
+                    <label for="on3">T:</label>
+                    <input id="on3" type="radio" name="on3" value="TP-T">
+
+                    &nbsp; &nbsp;
+
+                    <label for="amt3">Количество:</label>
+                    <input id="amt3" size="8" type="text" name="amount3" style="margin: 1px;">
+
+                    <br>
+
+                    <input id="dot4" type="checkbox" name="dot4" value="ICi9-10">
+                    <label for="dot4">Intel Core i9</label>
+
+                    &nbsp; &nbsp;
+
+                    <label for="on4">К:</label>
+                    <input id="on4" type="radio" name="on4" value="TP-K">
+                
+                    <label for="on4">M:</label>
+                    <input id="on4" type="radio" name="on4" value="TP-M">
+
+                    <label for="on4">T:</label>
+                    <input id="on4" type="radio" name="on4" value="TP-T">
+
+                    &nbsp; &nbsp;
+
+                    <label for="amt4">Количество:</label>
+                    <input id="amt4" size="8" type="text" name="amount4" style="margin: 1px;">
+
+                    <br><br>
+
+                </fieldset>
+
+                <br>
+
+            </section>
+
+            <section id="sec4">
+
+                <fieldset id="fld4">
+
+                    <legend>Оперативная память (RAM)</legend>
+
+                    <br>
+
+                    <label for="ram">Наименование:</label>
+                    <select name="ram">
+                        <optgroup label="Geil">
+                            <option value="gl1">PRIME B450M-A II</option>
+                            <option value="gl2">PRIME B550-PLUS</option>
+                            <option value="gl3">Prime X299-A II</option>
+                        </optgroup>
+                        <optgroup label="Kingstone">
+                            <option value="kn1">B450 AORUS Elite V2</option>
+                            <option value="kn2">B550 AORUS PRO AX</option>
+                            <option value="kn3">B550 AORUS PRO V2</option>
+                        </optgroup>
+                        <optgroup label="Samsung">
+                            <option value="sam1">MEG Z490 GODLIKE</option>
+                            <option value="sam2">PRESTIGE X570 CREATION</option>
+                            <option value="sam3">TRX40 PRO 10G</option>
+                        </optgroup>
+                    </select>
+
+                    <br> <br>
+
+                    <label for="vol">Объем:</label>
+                    <select name="vol">
+                        <option value="v1">4Gb</option>
+                        <option value="v2">8Gb</option>
+                        <option value="v3">16Gb</option>
+                        <option value="v4">32Gb</option>
+                        <option value="v5">128Gb</option>
+                        <option value="v6">256Gb</option>
+                    </select>
+
+                    &nbsp; &nbsp; &nbsp;
+
+                    <label for="amt1">Количество:</label>
+                    <input id="amt1" size="8" type="text" name="amount1" style="margin: 1px;">
+
+                    <br><br>
+            
+                </fieldset>
+
+                <br>
+
+            </section>
+  
+
+            <section id="sec5">
+
+                <fieldset id="fld5">
+
+                    <legend>Жесткий диск (SSD):</legend>
+
+                    <label for="ram"><br>Наименование:&nbsp; &nbsp;</label>
+                    <select name="ram">
+                        <optgroup label="Kingstone">
+                            <option value="ki1s">DC450R-A1</option>
+                            <option value="ki2s">DC450R-A2</option>
+                            <option value="ki3s">DC450R-C4</option>
+                        </optgroup>
+                        <optgroup label="Intel">
+                            <option value="int1s">Intel DC S3700 series A</option>
+                            <option value="int2s">Intel DC S3700 series B </option>
+                            <option value="int3s">Intel DC S3700 series C</option>
+                        </optgroup>
+                    </select>
+
+                    <label for="vol"><br><br>Объем:</label>
+                    <select name="vol">
+                        <option value="v1">4Gb</option>
+                        <option value="v2">8Gb</option>
+                        <option value="v3">16Gb</option>
+                        <option value="v4">32Gb</option>
+                        <option value="v5">128Gb</option>
+                        <option value="v6">256Gb</option>
+                    </select>
+
+                    &nbsp; &nbsp;
+
+                    <label for="amt1">Количество:&nbsp;</label>
+                    <input id="amt1" size="8" type="text" name="amount1" style="margin: 1px;">
+
+                    <br><br>
+
+                </fieldset>
+
+                <br>
+
+            </section>
+
+            <section id="sec6">
+
+                <fieldset id="fld6">
+
+                    <legend>Жесткий диск (HDD):</legend>
+
+                    <label for="ram"><br>Наименование:&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</label>
+                    <select name="ram">
+                        <optgroup label="Hitachi">
+                            <option value="hi1h">Ultrastar 15K600</option>
+                            <option value="hi2h">Deskstar 7K1000</option>
+                            <option value="gl3h">Ultrastar A7K1000</option>
+                        </optgroup>
+                        <optgroup label="Fujitsu">
+                            <option value="fu1h">S26361-F4482-LX</option>
+                            <option value="fu2h">S26361-F4482-LB</option>
+                            <option value="fu3h">S26361-F4482-XX</option>
+                        </optgroup>
+                        <optgroup label="WesternDigital">
+                            <option value="wd1h">WD Red Pro</option>
+                            <option value="wd2h">WD Green Pro</option>
+                            <option value="wd3h">WD Blue Pro</option>
+                            </optgroup>
+                    </select>
+
+                    <label for="vol"><br><br>Объем:</label>
+                    <select name="vol">
+                        <option value="v1">500Gb</option>
+                        <option value="v2">100Gb</option>
+                        <option value="v3">2Tb</option>
+                        <option value="v4">4Tb</option>
+                        <option value="v5">8Tb</option>
+                        <option value="v6">10Tb</option>
+                    </select>
+
+                    &nbsp; &nbsp;
+
+                    <label for="amt1">Количество:&nbsp;</label>
+                    <input id="amt1" size="8" type="text" name="amount1" style="margin: 1px;">
+
+                    <br><br>
+
+                </fieldset>
+
+                <br>
+
+            </section>
+
+            <section id="sec7">
+
+                <fieldset id="fld7">
+
+                    <legend>Блок птания (PSU)</legend>
+
+                    <br>
+            
+                    <label for="vol">Объем:</label>
+                    <select name="vol">
+                        <option value="ps1">350Вт</option>
+                        <option value="ps2">550Вт</option>
+                        <option value="ps3">650Вт</option>
+                        <option value="ps4">750Вт</option>
+                        <option value="ps5">950Вт</option>
+                        <option value="ps6">1200Вт</option>
+                    </select>
+
+                    <label for="on1">Silver:</label>
+                    <input id="on1" type="radio" name="on1" value="PSU-S">
+                
+                    <label for="on1">Gold:</label>
+                    <input id="on1" type="radio" name="on1" value="PSU-G">
+
+                    <label for="on1">Platinum:</label>
+                    <input id="on1" type="radio" name="on1" value="PSU-P">
+
+                    &nbsp; &nbsp;
+
+                    <label for="amt1">Количество:</label>
+                    <input id="amt1" size="8" type="text" name="amount1" style="margin: 1px;">
+
+                    <br><br>
+
+                </fieldset>
+
+                <br>
+
+            </section>
+
+            <section id="sec8">
+
+                <fieldset id="fld8">
+
+                    <br>
+
+                    <input type="submit" value="Сохранить данные">
+                    <button type="reset" style="cursor: pointer;">Очистить форму</button>
+
+                    <br><br>
+
+                </fieldset>
+
+            </section>
+
+        </form>
+
+</body>
+
+</html>
